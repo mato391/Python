@@ -1,0 +1,4 @@
+git add README.txt
+git commit -m "comment"
+git remoteadd origin https://github.com/mato391/Python.git
+git push -u origin master
