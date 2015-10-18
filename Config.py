@@ -26,7 +26,7 @@ class Config:
 
     def parseForFlags(self):
         '''
-        Parsing swconfig file
+        Parsing swconfig file. Get Flag, value and comment ignoring
         :return: None
         '''
         flags=[]
