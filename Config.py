@@ -36,12 +36,11 @@ class Config:
             if hashIndex != 0 and hashIndex != -1:
                 element = element[:hashIndex]
                 flags.append(element.split("=")[0])
-                values.append(element.split("=")[1].replace("\n", ""))
+                values.append(element.split("=")[1].replace("\n", "").replace(" ", ""))
             elif hashIndex != 0:
                 flags.append(element.split("=")[0])
-                values.append(element.split("=")[1].replace("\n", ""))
+                values.append(element.split("=")[1].replace("\n", "").replace(" ", ""))
         self.flags = dict(zip(flags, values))
-        LOGGER.logging("swconfig file loaded", "INFO")
 
     def isFlagSet(self, name, value="1"):
         '''
@@ -101,15 +100,3 @@ class Config:
             print(askForReset["invalidAnswer"])
 
 
-def main():
-    LOGGER.logging(welcome["StartProgram"], "INFO")
-    c = Config()
-    LOGGER.logging("Set flags: " + str(c.flags), "DEBUG")
-    LOGGER.logging(c.isFlagSet("0x01", "0"), "DEBUG")
-    if c.isFlagSet("0x01"):
-        LOGGER.logging("Debuging message", "DEBUG")
-
-
-
-if __name__ == '__main__':
-    main()
