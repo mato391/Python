@@ -6,3 +6,5 @@ askForReset = {"askForReset" : "Change requires restart program. Do you want to 
                "noReset" : "Your changes will be apply after reset.",
                "invalidAnswer": "Answer is not correct. Program continues work",
                "confirmReset": "Do you really want to restart program?"}
+
+windowTitle = {"main": "Main Window"}

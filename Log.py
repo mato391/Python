@@ -17,7 +17,7 @@ class Log:
         '''
         self.hFile.close()
 
-    def logging(self, info, type):
+    def logging(self, info, type="INFO"):
         '''
         Logging information with date and type of message.
         :return: None

@@ -2,16 +2,23 @@ __author__ = 'mato3'
 
 from Log import *
 from strings import *
+from Constance import *
 from Config import *
+from GUI import *
 
 def main():
-    LOGGER.logging(welcome["StartProgram"], "INFO")
+    LOGGER.logging(welcome["StartProgram"])
+    configure()
+    createWindow()
+
+def configure():
     c = Config()
     LOGGER.logging("Set flags: " + str(c.flags), "DEBUG")
-    if c.isFlagSet("0x01"):
-        LOGGER.logging("Debuging message", "DEBUG")
 
-
+def createWindow():
+    app = wx.App()
+    Window(None, title=windowTitle["main"], size=windowSize)
+    app.MainLoop()
 
 if __name__ == '__main__':
     main()
