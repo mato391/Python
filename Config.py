@@ -32,10 +32,16 @@ class Config:
         flags=[]
         values=[]
         for element in self.content:
-            flags.append(element.split("=")[0])
-            values.append(element.split("=")[1].replace("\n", ""))
+            hashIndex = element.find("#", 0, len(element))
+            if hashIndex != 0 and hashIndex != -1:
+                element = element[:hashIndex]
+                flags.append(element.split("=")[0])
+                values.append(element.split("=")[1].replace("\n", ""))
+            elif hashIndex != 0:
+                flags.append(element.split("=")[0])
+                values.append(element.split("=")[1].replace("\n", ""))
         self.flags = dict(zip(flags, values))
-        logger.logging("swconfig file loaded", "INFO")
+        LOGGER.logging("swconfig file loaded", "INFO")
 
     def isFlagSet(self, name, value="1"):
         '''
@@ -96,12 +102,12 @@ class Config:
 
 
 def main():
-    logger.logging(welcome["StartProgram"], "INFO")
+    LOGGER.logging(welcome["StartProgram"], "INFO")
     c = Config()
-    logger.logging("Set flags: " + str(c.flags), "DEBUG")
-    logger.logging(c.isFlagSet("0x01", "0"), "DEBUG")
+    LOGGER.logging("Set flags: " + str(c.flags), "DEBUG")
+    LOGGER.logging(c.isFlagSet("0x01", "0"), "DEBUG")
     if c.isFlagSet("0x01"):
-        logger.logging("Debuging message", "DEBUG")
+        LOGGER.logging("Debuging message", "DEBUG")
 
 
 

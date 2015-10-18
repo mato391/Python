@@ -1,5 +1,4 @@
-[INFO] 2015-10-17 21:51:12.668000 Program started	
-[INFO] 2015-10-17 21:51:12.669000 swconfig file loaded	
-[DEBUG] 2015-10-17 21:51:12.669000 Set flags: {'0x01': '1', '0x02': '1'}	
-[DEBUG] 2015-10-17 21:51:12.669000 False	
-[DEBUG] 2015-10-17 21:51:12.669000 Debuging message	
+[INFO] 2015-10-18 14:35:17.225000 Program started	
+[INFO] 2015-10-18 14:35:17.226000 swconfig file loaded	
+[DEBUG] 2015-10-18 14:35:17.227000 Set flags: {'0x01': '1  ', '0x02': '1'}	
+[DEBUG] 2015-10-18 14:35:17.227000 False	

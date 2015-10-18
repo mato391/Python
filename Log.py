@@ -35,5 +35,5 @@ class Log:
         self.hFile.write(log)
 
 
-logger = Log()
+LOGGER = Log()
 
