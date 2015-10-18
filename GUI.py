@@ -8,13 +8,13 @@ class Window(wx.Frame):
 
    def InitUI(self):
 
-        menubar = wx.MenuBar()
-        fileMenu = wx.Menu()
-        fitem = fileMenu.Append(wx.ID_EXIT, 'Quit', 'Quit application')
-        menubar.Append(fileMenu, '&File')
-        self.SetMenuBar(menubar)
+        self.menubar = wx.MenuBar()
+        self.fileMenu = wx.Menu()
+        self.fitem = self.fileMenu.Append(wx.ID_EXIT, 'Quit', 'Quit application')
+        self.menubar.Append(self.fileMenu, '&File')
+        self.SetMenuBar(self.menubar)
 
-        self.Bind(wx.EVT_MENU, self.OnQuit, fitem)
+        self.Bind(wx.EVT_MENU, self.OnQuit, self.fitem)
 
         self.Centre()
         self.Show(True)

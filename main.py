@@ -8,12 +8,10 @@ from GUI import *
 
 def main():
     LOGGER.logging(welcome["StartProgram"])
-    configure()
-    createWindow()
-
-def configure():
     c = Config()
     LOGGER.logging("Set flags: " + str(c.flags), "DEBUG")
+    createWindow()
+
 
 def createWindow():
     app = wx.App()
