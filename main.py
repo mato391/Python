@@ -1,5 +1,7 @@
 __author__ = 'mato3'
-
+'''
+Main file to run program.
+'''
 from Log import *
 from strings import *
 from Constance import *

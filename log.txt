@@ -1,3 +1,3 @@
-[INFO] 2015-10-18 15:33:06.248000 Program started	
-[DEBUG] 2015-10-18 15:33:06.249000 Set flags: {'0x01': '1', '0x02': '1'}	
-[INFO] 2015-10-18 15:33:08.663000 Input signal exit app 	
+[INFO] 2015-10-18 15:40:43.585000 Program started	
+[DEBUG] 2015-10-18 15:40:43.586000 Set flags: {'0x01': '1', '0x02': '1'}	
+[INFO] 2015-10-18 15:40:45.898000 Input signal exit app 	
